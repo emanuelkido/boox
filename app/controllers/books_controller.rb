@@ -10,9 +10,9 @@ class BooksController < ApplicationController
   def edit; end
 
   def update
-  return redirect_to @book if @book.update(book_params)
+    return redirect_to @book if @book.update(book_params)
     
-	render :edit
+	  render :edit
   end
 
   def new
