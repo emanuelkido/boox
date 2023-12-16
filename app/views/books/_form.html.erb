@@ -1,0 +1,21 @@
+<%= form_with(model: book) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, autofocus: true %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description, rows: 5 %>
+
+  <%= f.label :origin %>
+  <%= f.text_field :origin %>
+
+  <%= f.label :pages %>
+  <%= f.number_field :pages %>
+
+  <%= f.label :publication_date %>
+  <%= f.datetime_select :publication_date, {ampm: true}, {class: "datetime"} %>
+
+  <%= f.label :author %>
+  <%= f.text_field :author, autofocus: true %>
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,20 @@
+<section class="book-details">
+  <div class="details">
+    <h1><%= @book.name %></h1>
+    <p>
+      <%= pages(@book) %> pages
+    </p>
+    <p> Publication Date:
+      <%= day_and_time(@book) %>
+    </p>
+    <p>
+      <%= @book.description %>
+    </p>
+  </div>
+</section>
+
+<section class="admin">
+  <%= link_to "Edit", edit_book_path(@book), class: "button" %>
+  <%= link_to "Delete", @book, class: "button",
+        data: { turbo_method: :delete, turbo_confirm: "Really?!" } %>
+</section>

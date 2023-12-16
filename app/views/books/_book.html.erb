@@ -1,0 +1,15 @@
+<% @books.each do |book| %>
+  <section class="book">
+    <div class="summary">
+      <h2><%= link_to book.name, book %></h2>
+    <p>  Publication Date: <%= day_and_time(book) %> </p> 
+    <p> Origin: <%= book.origin %></p>
+      <span class="pages">
+      pages:  <%= pages(book) %>
+      </span>
+      <p>
+        <%= truncate(book.description, length: 35, separator: ' ') %>
+      </p>
+    </div>
+  </section>
+<% end %>
